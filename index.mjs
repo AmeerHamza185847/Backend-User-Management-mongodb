@@ -61,14 +61,13 @@ const User = mongoose.model('User', userSchema);
 
 
 // fetching all users GET request
-app.get('/', async (req, res) => {
-    // try {
-    //     const allUsers = await User.find();
-    //     res.status(201).json({ message: "All users successfully fetched!", allUsers: allUsers });
-    // } catch (error) {
-    //     res.status(500).json({ "Error in fetching users ": error.message });
-    // }
-    res.json({message:"fetching all users...."});
+app.get('/api/users', async (req, res) => {
+    try {
+        const allUsers = await User.find();
+        res.status(201).json({ message: "All users successfully fetched!", allUsers: allUsers });
+    } catch (error) {
+        res.status(500).json({ "Error in fetching users ": error.message });
+    }
 })
 
 // adding new users POST request
