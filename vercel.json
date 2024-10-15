@@ -10,8 +10,5 @@
       "src": "/(.*)",
       "dest": "index.mjs"
     }
-  ],
-  "build": {
-    "runtime": "nodejs18"
-  }
+  ]
 }
