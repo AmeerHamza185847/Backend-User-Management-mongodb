@@ -61,7 +61,7 @@ const User = mongoose.model('User', userSchema);
 
 
 // fetching all users GET request
-app.get('/api/users', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         const allUsers = await User.find();
         res.status(201).json({ message: "All users successfully fetched!", allUsers: allUsers });
